@@ -1,0 +1,19 @@
+{
+    "name": "rapoo/udb.test",
+    "description": "test",
+    "authors": [
+        {
+            "name": "iRapoo",
+            "email": "rapoo.git@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/database": "6.4.1"
+    },
+    "autoload": {
+        "psr-4" : {
+            "Controllers\\": "app/controllers/",
+            "Models\\": "app/models/"
+        }
+    }
+}
