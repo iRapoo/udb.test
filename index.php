@@ -1,10 +1,11 @@
 <?php
-require "config.php";
-require "vendor/autoload.php";
+require 'config.php';
+require 'vendor/autoload.php';
 
 use Models\Database;
-use Controllers\Users;
 
-$dt = new Database();
+$database = new Database();
 
-echo Users::get_users();
+$view = new ArrayObject();
+
+require 'views/' . $_GET['view'] . '/template.php';
