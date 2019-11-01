@@ -23,7 +23,7 @@
 
             <tr>
                 <th scope="row"><?= $user->id ?></th>
-                <td><img src="<?= $user->photo ?>" height="50" alt=""/></td>
+                <td><img src="/storage/<?= $user->photo ?>" height="50" alt=""/></td>
                 <td><?= $user->name ?></td>
                 <td><?= $user->email ?></td>
             </tr>

@@ -1,0 +1,1 @@
+<?php require 'views/' . $_GET['view'] . '/index.php';
