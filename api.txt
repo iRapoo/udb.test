@@ -1,0 +1,4 @@
+/api/get_token?key=[пользовательский ключ]		Получить токен
+/api/get_users?token=[сгенерированый токен]		Получить список пользователей
+/api/create_user - POST [token, name, email, photo]	Создать нового пользователя
+/api/delete_user - POST [token, id]			Удалить определенного пользователя
