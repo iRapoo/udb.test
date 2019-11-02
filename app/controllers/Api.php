@@ -101,6 +101,24 @@ class Api
         return $result;
     }
 
+    public static function check_email()
+    {
+        $user = User::where('email', $_POST['email'])->get();
+
+        if(count($user) > 0)
+        {
+            return $res = [
+                'state' => 0,
+                'message' => 'Email "'. $_POST['email'] .'" уже занят'
+            ];
+        } else {
+            return $res = [
+                'state' => 1,
+                'message' => 'Email адрес доступен'
+            ];
+        }
+    }
+
     private static function checkToken($token)
     {
         $date = new \DateTime();
@@ -120,4 +138,5 @@ class Api
         }
         return $randstring;
     }
+
 }

@@ -19,6 +19,9 @@ switch ($_GET['method']) {
     case 'delete_user':
         $data = Api::delete_user();
         break;
+    case 'check_email':
+        $data = Api::check_email();
+        break;
     default:
         $data = 'Method not found';
         break;

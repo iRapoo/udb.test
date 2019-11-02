@@ -19,3 +19,15 @@ label {
     flex-direction: column;
     margin: auto;
 }
+
+.main_user_data {
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0 15px 0;
+    padding: 15px 0 15px 0;
+    border-bottom: 1px dashed #cccccc;
+}
+
+.mud_block_d {
+    margin-left: 15px;
+}

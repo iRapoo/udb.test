@@ -15,9 +15,10 @@ $okMessageDen = 'Пользователь уже зарегестрирован'
 
 if(isset($_GET['verify']))
 {
-    echo Users::verify_user($_GET['verify']);
+    $_SESSION['user_data'] = Users::verify_user($_GET['verify']);
+    header('Location: /list'); exit;
 
-    return false;
+    //return false;
 }
 
 try
@@ -27,7 +28,7 @@ try
         // validate the ReCaptcha, if something is wrong, we throw an Exception,
         // i.e. code stops executing and goes to catch() block
 
-        /*if (!isset($_POST['g-recaptcha-response'])) {
+        if (!isset($_POST['g-recaptcha-response'])) {
             throw new \Exception('ReCaptcha is not set.');
         }
 
@@ -43,7 +44,7 @@ try
 
         if (!$response->isSuccess()) {
             throw new \Exception('ReCaptcha was not validated.');
-        }*/
+        }
 
         $user = Users::create_user($_POST);
 

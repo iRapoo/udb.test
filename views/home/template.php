@@ -30,7 +30,7 @@
                             <input id="form_email" type="email" name="email" class="form-control"
                                    placeholder="Укажите Ваш Email *" required="required"
                                    data-error="Email указать обязательно.">
-                            <div class="help-block with-errors"></div>
+                            <div class="help-block with-errors check-email"></div>
                         </div>
                     </div>
 
