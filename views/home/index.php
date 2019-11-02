@@ -1,6 +1,7 @@
 <?php
 
 use Controllers\Users;
+use ReCaptcha\ReCaptcha;
 
 $view->title = 'Главная страница';
 
@@ -35,7 +36,7 @@ try
         // do not forget to enter your secret key in the config above
         // from https://www.google.com/recaptcha/admin
 
-        $recaptcha = new \ReCaptcha\ReCaptcha($view->recaptcha_key, new \ReCaptcha\RequestMethod\CurlPost());
+        $recaptcha = new ReCaptcha(RECAPTCHA_S, new \ReCaptcha\RequestMethod\CurlPost());
 
         // we validate the ReCaptcha field together with the user's IP address
 
